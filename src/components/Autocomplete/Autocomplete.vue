@@ -1,41 +1,41 @@
 <template>
-  <v-autocomplete 
-    :items="autocomplete_items" 
-    v-model="item" 
-    :get-label="getLabel"
+  <v-autocomplete
+    :items='autocomplete_items'
+    v-model='item'
+    :get-label='getLabel'
     :component-item='template'
-    @item-selected="itemSelected"
-    @update-items="updateItems">
+    @item-selected='itemSelected'
+    @update-items='updateItems'>
   </v-autocomplete>
 </template>
 
 <script>
-import ItemTemplate from './ItemTemplate'
-import {searchPlaces} from '../../utils/Geocoder'
+import ItemTemplate from './ItemTemplate';
+import { searchPlaces } from '../../utils/Geocoder';
 
 export default {
-  name: "Autocomplete",
+  name: 'Autocomplete',
   data() {
     return {
-      autocomplete_items:[],
-      item:null,
-      template: ItemTemplate
+      autocomplete_items: [],
+      item: null,
+      template: ItemTemplate,
     };
   },
-  methods:{
-    itemSelected(item){
-      this.$emit('item-selected', item)
+  methods: {
+    itemSelected(item) {
+      this.$emit('item-selected', item);
     },
-    getLabel(item){
+    getLabel(item) {
       return item.label;
     },
-    updateItems (text) {
+    updateItems(text) {
       searchPlaces(text)
-      .then(result =>{
-        this.autocomplete_items = result.suggestions;
-      })
-    }
-  }
+        .then((result) => {
+          this.autocomplete_items = result.suggestions;
+        });
+    },
+  },
 };
 </script>
 

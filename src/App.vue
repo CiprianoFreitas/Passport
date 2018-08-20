@@ -1,27 +1,27 @@
 <template>
-  <div id="app">
-    <h1 class="title">Passport</h1>
+  <div id='app'>
+    <h1 class='title'>Passport</h1>
     <Sidebar />
     <Map />
   </div>
 </template>
 
 <script>
-import Map from "./components/Map";
-import Sidebar from "./components/Sidebar";
-import store from './utils/Store'
+import Map from './components/Map';
+import Sidebar from './components/Sidebar';
+import store from './utils/Store';
 
 export default {
-  name: "App",
+  name: 'App',
   components: {
     Map,
-    Sidebar
+    Sidebar,
   },
-  data(){
+  data() {
     return {
-      shared: store.state
-    }
-  }
+      shared: store.state,
+    };
+  },
 };
 </script>
 
@@ -30,7 +30,7 @@ body{
   margin: 0;
 }
 #app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
