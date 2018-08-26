@@ -26,7 +26,7 @@ export default {
 </script>
 
 <style>
-body{
+body {
   margin: 0;
 }
 #app {
@@ -36,13 +36,13 @@ body{
   color: #2c3e50;
 }
 
-.title{
+.title {
   position: absolute;
   color: white;
   left: 3rem;
   font-size: 3rem;
-  background-color: #0000007e;;
-  padding:1rem;
+  background-color: #0000007e;
+  padding: 1rem;
   z-index: 10;
 }
 </style>

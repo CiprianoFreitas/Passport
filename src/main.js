@@ -6,7 +6,6 @@ import Autocomplete from 'v-autocomplete';
 import Vue from 'vue';
 import App from './App';
 
-
 Vue.config.productionTip = false;
 Vue.use(Autocomplete);
 /* eslint-disable no-new */

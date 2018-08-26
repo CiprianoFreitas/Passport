@@ -31,12 +31,12 @@ export default {
     addPlace() {
       this.cities.push(this.city);
       // console.log(this.city);
-      getLocationData(this.city.locationId)
-        .then((r) => {
-          const location = r.response.view['0'].result['0'].location.displayPosition;
-          // console.log(location);
-          store.setLocation(location);
-        });
+      getLocationData(this.city.locationId).then((r) => {
+        const location =
+          r.response.view['0'].result['0'].location.displayPosition;
+        // console.log(location);
+        store.setLocation(location);
+      });
       this.city = { label: '' };
     },
   },
@@ -45,7 +45,7 @@ export default {
 
 <!-- Add 'scoped' attribute to limit CSS to this component only -->
 <style scoped>
-.sidebar{
+.sidebar {
   background-color: #0000007e;
   padding: 1rem;
   position: absolute;
@@ -54,9 +54,9 @@ export default {
   z-index: 10;
 }
 
-.cities-list{
-  color:white;
-  padding:0;
+.cities-list {
+  color: white;
+  padding: 0;
   list-style: none;
 }
 </style>

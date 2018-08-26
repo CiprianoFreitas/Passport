@@ -4,7 +4,7 @@ app_id=3FDejKh8tJBrvwJA89AP&\
 app_code=mFz_rDiDnYINoh02K6yYbQ&\
 query=${text}`;
 
-  return fetch(url).then(response => response.json());
+  return fetch(url).then((response) => response.json());
 }
 
 export function getLocationData(locationId) {
@@ -15,5 +15,5 @@ export function getLocationData(locationId) {
 &app_id=3FDejKh8tJBrvwJA89AP\
 &app_code=mFz_rDiDnYINoh02K6yYbQ`;
 
-  return fetch(url).then(response => response.json());
+  return fetch(url).then((response) => response.json());
 }

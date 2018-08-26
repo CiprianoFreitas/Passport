@@ -30,10 +30,9 @@ export default {
       return item.label;
     },
     updateItems(text) {
-      searchPlaces(text)
-        .then((result) => {
-          this.autocomplete_items = result.suggestions;
-        });
+      searchPlaces(text).then((result) => {
+        this.autocomplete_items = result.suggestions;
+      });
     },
   },
 };
@@ -49,7 +48,9 @@ export default {
   outline: none;
   background-color: #eee;
 }
-.v-autocomplete .v-autocomplete-input-group.v-autocomplete-selected .v-autocomplete-input {
+.v-autocomplete
+  .v-autocomplete-input-group.v-autocomplete-selected
+  .v-autocomplete-input {
   color: black;
 }
 .v-autocomplete .v-autocomplete-list {
